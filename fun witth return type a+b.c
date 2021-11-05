@@ -1,15 +1,29 @@
 #include<stdio.h>
-int add();
+int prime();
 void main()
 {
-	int res=0;
-	res=add();
+	int n,res=0;
+	res=prime();
 	printf("%d",res);
+	if(n==res)
+	{
+		printf("prime");
+	}
+	else
+	{
+		printf("not prime");
+	}
 }
-int add()
+int prime()
 {
-	int a,b,c;
-	scanf("%d%d",&a,&b);
-	c=a+b;
-	return c;
+	int i,n,count=0;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		if(n%i==0)
+		{
+			count=count+1;
+		}
+		return count;
+	}
 }
